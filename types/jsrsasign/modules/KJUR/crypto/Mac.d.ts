@@ -55,16 +55,17 @@ declare namespace jsrsasign.KJUR.crypto {
 
         /**
          * completes hash calculation and returns hash result
+         * @return resulted hash
          * @example
-         * mac.digest()
+         * mac.doFinal()
          */
-        doFinal(): void;
+        doFinal(): string;
 
         /**
          * performs final update on the digest using string, then completes the digest computation
          * @param str string to final update
          * @example
-         * mac.digestString('aaa')
+         * mac.doFinalString('aaa')
          */
         doFinalString(str: string): void;
 
@@ -73,7 +74,7 @@ declare namespace jsrsasign.KJUR.crypto {
          * then completes the digest computation
          * @param hex hexadecimal string to final update
          * @example
-         * mac.digestHex('0f2abd')
+         * mac.doFinalHex('0f2abd')
          */
         doFinalHex(hex: string): void;
 
