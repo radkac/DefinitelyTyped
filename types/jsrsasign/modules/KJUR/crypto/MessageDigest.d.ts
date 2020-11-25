@@ -87,20 +87,22 @@ declare namespace jsrsasign.KJUR.crypto {
 
         /**
          * completes hash calculation and returns hash result
+         * @return resulted hash
          * @description
          * @example
          * md.digest()
          */
-        digest(): void;
+        digest(): string;
 
         /**
          * performs final update on the digest using string, then completes the digest computation
          * @param str string to final update
+         * @return resulted hash
          * @description
          * @example
          * md.digestString('aaa')
          */
-        digestString(str: string): void;
+        digestString(str: string): string;
 
         /**
          * performs final update on the digest using hexadecimal string, then completes the digest computation
